@@ -7,7 +7,7 @@ import { useFoodData } from "../hooks/useFoodData";
 
 export function Cadastro(){
 
-    const {data} = useFoodData();
+    const {storeItems} = useFoodData();
 
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState(0);
@@ -49,7 +49,7 @@ export function Cadastro(){
                         <th className="rounded bg-zinc-950">Price</th>
                     </thead>
                     <tbody >
-                    {data?.map(item =>
+                    {storeItems?.map(item =>
                         <tr >
                             <td className="flex justify-center rounded bg-zinc-700 ">{item.title}</td>
                             <td className="rounded bg-zinc-700">{description}</td>

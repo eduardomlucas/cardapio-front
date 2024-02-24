@@ -14,12 +14,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
     const { closeCart, cartItems } = useShoppingCart()
     const pedido = useLocalStorage("shopping-cart",[]);
     const handleSubmit = () =>{
-
-        console.log(" aqui: "+JSON.stringify(pedido) );
-
-        //envia para o back consulta se tem disponível
-
-        //se sim redireciona para a tela
+        console.log("pedido: "+JSON.stringify(pedido) );
         window.location.replace("http://localhost:5173/entrega");
     }
     return (
